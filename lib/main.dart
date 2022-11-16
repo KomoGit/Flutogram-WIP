@@ -13,26 +13,32 @@ List<StoryData> stories = [
   StoryData(
     "Kenneth Walter",
     "https://randomuser.me/api/portraits/men/51.jpg",
+    "https://wallpaper.dog/large/20521642.jpg",
   ),
   StoryData(
     "Amanda Simons",
     "https://randomuser.me/api/portraits/women/73.jpg",
+    "https://wallpaper.dog/large/20521639.jpg",
   ),
   StoryData(
     "Henry Welfam",
     "https://randomuser.me/api/portraits/men/24.jpg",
+    "https://wallpaper.dog/large/20521643.jpg",
   ),
   StoryData(
     "Troy Cole",
     "https://randomuser.me/api/portraits/men/6.jpg",
+    "https://wallpaper.dog/large/20521645.jpg",
   ),
   StoryData(
     "Ricardo Martin",
     "https://randomuser.me/api/portraits/men/26.jpg",
+    "https://wallpaper.dog/large/20521652.jpg",
   ),
   StoryData(
     "Beverly Ward",
     "https://randomuser.me/api/portraits/women/67.jpg",
+    "https://wallpaper.dog/large/5530554.jpg",
   ),
 ];
 
@@ -75,7 +81,7 @@ class Home extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Container(
+          SizedBox(
             width: double.infinity,
             height: 150,
             child: ListView(
@@ -86,9 +92,10 @@ class Home extends StatelessWidget {
                 storyButton(stories[2], context),
                 storyButton(stories[3], context),
                 storyButton(stories[4], context),
+                storyButton(stories[5], context),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

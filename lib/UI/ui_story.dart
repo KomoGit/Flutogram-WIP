@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:instaui/Data/dat_story.dart';
+import 'package:instaui/UI/ui_storyview.dart';
 
 Widget storyButton(StoryData data, BuildContext context) {
   return Padding(
@@ -10,7 +11,12 @@ Widget storyButton(StoryData data, BuildContext context) {
         InkWell(
           borderRadius: BorderRadius.circular(50),
           onTap: () {
-            debugPrint("Gay Sex");
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => StoryView(
+                          storyData: data,
+                        )));
           },
           child: Container(
             width: 70,

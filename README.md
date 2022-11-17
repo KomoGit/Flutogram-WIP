@@ -7,7 +7,7 @@ I am trying to recreate popular app UI's on Flutter so as a challenge I made the
 
 | Plugin | README |
 | ------ | ------ |
-| gradient_borders |[https://pub.dev/packages/gradient_borders|
+| gradient_borders |https://pub.dev/packages/gradient_borders|
 | Dillinger.io | https://dillinger.io/|
 | FlutterIcon.com | https://www.fluttericon.com/|
 | Randomuser.me | https://randomuser.me/|

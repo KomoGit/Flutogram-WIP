@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:instaui/UI/db_icons.dart';
 import 'package:instaui/UI/ui_bar.dart';
+import 'package:instaui/UI/ui_post.dart';
+import 'package:instaui/UI/ui_profile.dart';
 import 'package:instaui/UI/ui_story.dart';
 import 'package:instaui/Data/dat_story.dart';
 
 //TEST DATA
 List<StoryData> stories = [
   StoryData(
-    "Kenneth Walter",
+    "Your Story",
+    "https://randomuser.me/api/portraits/men/18.jpg",
+    "storyURL",
+  ),
+  StoryData(
+    "Ken Walter",
     "https://randomuser.me/api/portraits/men/51.jpg",
     "https://wallpaper.dog/large/20521642.jpg",
   ),
@@ -65,7 +72,7 @@ class Home extends StatelessWidget {
         children: [
           SizedBox(
             width: double.infinity,
-            height: 150,
+            height: 110,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
@@ -75,7 +82,27 @@ class Home extends StatelessWidget {
                 storyButton(stories[3], context),
                 storyButton(stories[4], context),
                 storyButton(stories[5], context),
+                storyButton(stories[6], context),
               ],
+            ),
+          ),
+          SizedBox(
+            width: double.maxFinite,
+            height: 500,
+            child: Scaffold(
+              appBar: AppBar(
+                  leading: profileCircle(stories[1], context),
+                  actions: const [
+                    Icon(
+                      Icons.more_vert,
+                      color: Colors.black,
+                      size: 34,
+                    )
+                  ],
+                  backgroundColor: Colors.white),
+              //Should be wrapped in ListView and list view should be given PostCard as children
+              body: const PostCard(),
+              backgroundColor: Colors.black,
             ),
           ),
         ],

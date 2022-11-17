@@ -1,7 +1,7 @@
 # Flutogram-WIP
 I am trying to recreate popular app UI's on Flutter so as a challenge I made the front end UI of Instagram. 
 
-[![Flutter Instagram](https://freeimage.host/i/H9VYZmv)](https://freeimage.host/i/H9VYZmv)
+[![Flutter Instagram](https://iili.io/H9VYZmv.png)](https://freeimage.host/i/H9VYZmv)
 
 ## Dependencies and tools (SO FAR)
 

@@ -12,6 +12,7 @@ class StoryView extends StatefulWidget {
   State<StoryView> createState() => _StoryViewState();
 }
 
+//TODO: Fix issue where timer is still counting down before the image is fully loaded in.
 class _StoryViewState extends State<StoryView> {
   double percent = 0.0;
   Timer? _timer;

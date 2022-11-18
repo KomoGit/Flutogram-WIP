@@ -92,12 +92,20 @@ class Home extends StatelessWidget {
             child: Scaffold(
               appBar: AppBar(
                   leading: profileCircle(stories[1], context),
+                  title: Text(
+                    stories[1].userName,
+                    style: const TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 12,
+                    ),
+                  ),
                   actions: const [
                     Icon(
                       Icons.more_vert,
                       color: Colors.black,
                       size: 34,
-                    )
+                    ),
                   ],
                   backgroundColor: Colors.white),
               //Should be wrapped in ListView and list view should be given PostCard as children

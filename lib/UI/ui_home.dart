@@ -2,48 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:instaui/UI/db_icons.dart';
 import 'package:instaui/UI/ui_bar.dart';
 import 'package:instaui/UI/ui_post.dart';
-import 'package:instaui/UI/ui_profile.dart';
+//import 'package:instaui/UI/ui_profile.dart';
 import 'package:instaui/UI/ui_story.dart';
-import 'package:instaui/Data/dat_story.dart';
+import 'package:instaui/Data/dat_mock.dart';
 
 //TEST DATA
-List<StoryData> stories = [
-  StoryData(
-    "Your Story",
-    "https://randomuser.me/api/portraits/men/18.jpg",
-    "storyURL",
-  ),
-  StoryData(
-    "Ken Walter",
-    "https://randomuser.me/api/portraits/men/51.jpg",
-    "https://wallpaper.dog/large/20521642.jpg",
-  ),
-  StoryData(
-    "Amanda Simons",
-    "https://randomuser.me/api/portraits/women/73.jpg",
-    "https://wallpaper.dog/large/20521639.jpg",
-  ),
-  StoryData(
-    "Henry Welfam",
-    "https://randomuser.me/api/portraits/men/24.jpg",
-    "https://wallpaper.dog/large/20521643.jpg",
-  ),
-  StoryData(
-    "Troy Cole",
-    "https://randomuser.me/api/portraits/men/6.jpg",
-    "https://wallpaper.dog/large/20521645.jpg",
-  ),
-  StoryData(
-    "Ricardo Martin",
-    "https://randomuser.me/api/portraits/men/26.jpg",
-    "https://wallpaper.dog/large/20521652.jpg",
-  ),
-  StoryData(
-    "Beverly Ward",
-    "https://randomuser.me/api/portraits/women/67.jpg",
-    "https://wallpaper.dog/large/5530554.jpg",
-  ),
-];
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -86,30 +49,30 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: double.maxFinite,
             height: 500,
             child: Scaffold(
-              appBar: AppBar(
-                  leading: profileCircle(stories[1], context),
-                  title: Text(
-                    stories[1].userName,
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 12,
-                    ),
-                  ),
-                  actions: const [
-                    Icon(
-                      Icons.more_vert,
-                      color: Colors.black,
-                      size: 34,
-                    ),
-                  ],
-                  backgroundColor: Colors.white),
+              // appBar: AppBar(
+              //     leading: profileCircle(stories[1], context),
+              //     title: Text(
+              //       stories[1].userName,
+              //       style: const TextStyle(
+              //         color: Colors.black,
+              //         fontWeight: FontWeight.w500,
+              //         fontSize: 12,
+              //       ),
+              //     ),
+              //     actions: const [
+              //       Icon(
+              //         Icons.more_vert,
+              //         color: Colors.black,
+              //         size: 34,
+              //       ),
+              //     ],
+              //     backgroundColor: Colors.white),
               //Should be wrapped in ListView and list view should be given PostCard as children
-              body: const PostCard(),
+              body: PostCard(),
               backgroundColor: Colors.black,
             ),
           ),

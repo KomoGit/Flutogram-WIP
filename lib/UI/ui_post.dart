@@ -105,6 +105,16 @@ class PostCard extends StatelessWidget {
               ),
             ],
           ),
+          Container(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [Text("data")],
+            ),
+          )
         ],
       ),
     );

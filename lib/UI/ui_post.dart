@@ -34,10 +34,8 @@ class PostCard extends StatelessWidget {
                       children: [
                         Text(
                           stories[1].userName,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        )
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ],
                     ),
                   ),
@@ -76,6 +74,7 @@ class PostCard extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.35,
             width: double.infinity,
             child: Image.network(
+              //https://i.kym-cdn.com/entries/icons/original/000/036/244/kisscover.jpg
               stories[1].storyURL,
               fit: BoxFit.cover,
             ),
@@ -84,7 +83,10 @@ class PostCard extends StatelessWidget {
             children: [
               IconButton(
                 onPressed: () {},
-                icon: const Icon(DBIcons.heart),
+                icon: const Icon(
+                  Icons.favorite_outline,
+                  size: 30,
+                ),
               ),
               IconButton(
                 onPressed: () {},
@@ -112,7 +114,46 @@ class PostCard extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [Text("data")],
+              children: [
+                DefaultTextStyle(
+                  style: Theme.of(context)
+                      .textTheme
+                      .subtitle2!
+                      .copyWith(fontWeight: FontWeight.w800),
+                  child: Text(
+                    "53 Likes",
+                    style: Theme.of(context).textTheme.bodyText2,
+                  ),
+                ),
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.only(
+                    top: 6,
+                  ),
+                  child: RichText(
+                    text: const TextSpan(
+                      style: TextStyle(color: Colors.black),
+                      children: [
+                        TextSpan(
+                          text: "Ken Walter",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        TextSpan(
+                          text:
+                              " Illustration has became one of my favorite pass times. Beats wasting my time playing overwatch or Lol.",
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  child: const Text(
+                    "12 Comments",
+                    style: TextStyle(fontSize: 12, color: Colors.grey),
+                  ),
+                ),
+              ],
             ),
           )
         ],
